@@ -2,15 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2048</title>
-    <link
-      rel="stylesheet"
-      href="./styles/main.scss"
-    />
+    <link rel="stylesheet" href="./styles/main.scss" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -40,24 +34,31 @@
       sizes="512x512"
       href="../src/images/favicon_io/android-chrome-512x512.png"
     />
-    <link
-      rel="manifest"
-      href="../src/images/favicon_io/site.webmanifest"
-    />
+    <link rel="manifest" href="../src/images/favicon_io/site.webmanifest" />
   </head>
   <body>
     <div class="container">
       <div class="game-header">
         <h1>2048</h1>
         <div class="controls">
-          <p class="info info--best">
+          <div class="counter">
+            <p class="counter-title">
+              Score:
+              <span class="game-score">0</span>
+            </p>
+            <p class="counter-title">
+              Best:
+              <span class="game-best-score">0</span>
+            </p>
+          </div>
+          <!-- <p class="info info--best">
             Record:
             <span class="game-best-score">0</span>
           </p>
           <p class="info">
             Score:
             <span class="game-score">0</span>
-          </p>
+          </p> -->
           <button class="button start">Start</button>
         </div>
       </div>
@@ -97,7 +98,9 @@
       <div class="message-container">
         <div class="message message-rules hidden">
           <div class="language-buttons">
-            <button class="btn-language btn-language--is-active btn-en">En</button>
+            <button class="btn-language btn-language--is-active btn-en">
+              En
+            </button>
             <button class="btn-language btn-de">De</button>
             <button class="btn-language btn-esp">Esp</button>
             <button class="btn-language btn-ru">Ru</button>
@@ -117,9 +120,6 @@
         <button class="button rules-btn">Rules</button>
       </div>
     </div>
-    <script
-      type="module"
-      src="scripts/main.js"
-    ></script>
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

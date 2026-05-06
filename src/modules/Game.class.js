@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * This class represents the game.
@@ -21,10 +21,10 @@ class Game {
    * initial state.
    */
   static statuses = {
-    idle: "idle",
-    playing: "playing",
-    win: "win",
-    lose: "lose",
+    idle: 'idle',
+    playing: 'playing',
+    win: 'win',
+    lose: 'lose',
   };
 
   #size;
@@ -52,7 +52,7 @@ class Game {
     this.#size = this.board.length;
     this.#status = Game.statuses.idle;
 
-    const localValue = localStorage.getItem("best-score");
+    const localValue = localStorage.getItem('best-score');
 
     this.#bestScore =
       this.localValue === null ? this.#score : Number(localValue);
@@ -300,7 +300,7 @@ class Game {
   #updateBestScore() {
     if (this.#bestScore < this.#score) {
       this.#bestScore = this.#score;
-      localStorage.setItem("best-score", this.#bestScore);
+      localStorage.setItem('best-score', this.#bestScore);
     }
   }
   // --> shift of values in the row and addition of values
@@ -339,11 +339,11 @@ class Game {
     for (let i = 0; i < this.#size; i++) {
       const curr = updatedArray[i];
 
-      newValidRow.push(typeof curr === "number" ? curr : 0);
+      newValidRow.push(typeof curr === 'number' ? curr : 0);
     }
 
-    const beforeRow = row.join(",");
-    const afterRow = newValidRow.join(",");
+    const beforeRow = row.join(',');
+    const afterRow = newValidRow.join(',');
     const isChange = beforeRow !== afterRow;
 
     return {
