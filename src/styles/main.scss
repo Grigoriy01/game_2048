@@ -1,8 +1,8 @@
-html {
-  overscroll-behavior-y: contain;
+html, body {
   overflow: hidden;
-  margin: 0;
+  overscroll-behavior-y: contain;
   width: 100%;
+  margin: 0;
 }
 
 body {
