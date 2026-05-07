@@ -137,10 +137,13 @@ h1 {
 
   background: #d6cdc4;
 
-  &--best {
-    font-size: 16px;
-    color: #776e65;
+  &__best {
+    color: #9d958d;
   }
+}
+
+.game-best-score {
+  color: #9d958d;
 }
 
 .counter {
@@ -224,8 +227,13 @@ h1 {
     transform: scale(1.1);
   }
 
+  &:active {
+    transform: scale(0.9);
+  }
+
   &--is-active {
     background-color: #484747;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   }
 }
 
