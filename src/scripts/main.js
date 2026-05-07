@@ -86,13 +86,26 @@ class GameView {
       this.#touchPosStartY = e.touches[0].clientY;
     });
 
-    this.bodyContainer.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-    });
+    this.bodyContainer.addEventListener(
+      'touchmove',
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false },
+    );
 
     this.bodyContainer.addEventListener('touchend', (e) => {
       const touchPosEndX = e.changedTouches[0].clientX;
       const touchPosEndY = e.changedTouches[0].clientY;
+
+      const threshold = 50; // pixels
+      const diffX = touchPosEndX - this.#touchPosStartX;
+      const diffY = touchPosEndY - this.#touchPosStartY;
+
+      // Проверяем, было ли движение достаточно длинным по любой из осей
+      if (Math.abs(diffX) < threshold && Math.abs(diffY) < threshold) {
+        return;
+      }
 
       if (this.#touchPosStartX < touchPosEndX) {
         this.game.moveRight();
