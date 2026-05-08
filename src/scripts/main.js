@@ -9,19 +9,19 @@ class GameView {
   #timerWin;
   #languages = {
     en: [
-      'How to play: Use your arrow keys (up, down, left, right) to move the tiles.',
+      'How to play: Use the arrow keys (up, down, left, right) or swipes on a mobile device to move the tiles.',
       'Merging: When two tiles with the same number touch, they merge into one!',
       'Goal: Join the tiles to get to the 2048 tile!',
       'Game Over: If the board is full and there are no moves left, the game is over.',
     ],
     de: [
-      'So wird gespielt: Benutze die Pfeiltasten (hoch, runter, links, rechts), um die Kacheln zu bewegen.',
+      'Spielanleitung: Verwenden Sie die Pfeiltasten (hoch, runter, links, rechts) oder Wischgesten auf einem mobilen Gerät, um die Spielsteine ​​zu bewegen.',
       'Verschmelzen: Wenn zwei Kacheln mit der gleichen Zahl einander berühren, verschmelzen sie zu einer!',
       'Ziel: Kombiniere die Kacheln, um die 2048-Kachel zu erreichen!',
       'Spiel vorbei: Wenn das Spielfeld voll ist und keine Züge mehr möglich sind, ist das Spiel beendet.',
     ],
     ru: [
-      'Как играть: Используй клавиши со стрелками (вверх, вниз, влево, вправо), чтобы перемещать плитки.',
+      'Как играть: используйте клавиши со стрелками (вверх, вниз, влево, вправо) или свайпы на мобильном устройстве, чтобы перемещать плитки.',
       'Слияние: Когда две плитки с одинаковыми числами соприкасаются, они объединяются в одну, а их номиналы суммируются.',
       'Цель: Соединяй плитки и копи очки, чтобы добраться до числа 2048.',
       'Конец игры: Если поле заполнено и доступных ходов для слияния больше нет — игра окончена.',
