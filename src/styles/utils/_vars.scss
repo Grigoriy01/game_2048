@@ -1,0 +1,91 @@
+// color menu
+$bg-main: #FFF;
+$text-header: #2D3436;
+$text-info: #636E72;
+$tile-default: #F1F2F6;
+$button-start: #00CFC1;
+$button-restart: #d595cc;
+$button-rules: #B9B4E3;
+
+// color cells
+$tile-2-start: #E1F5FE;
+$tile-2-end: #E0F2F1;
+$tile-4-start: #E8F5E9;
+$tile-4-end: #D4E157;
+$tile-8-start: #FFFDE7;
+$tile-8-end: #FDD835;
+$tile-16-start: #FFF3E0;
+$tile-16-end: #FB8C00;
+$tile-32-start: #FFEBEE;
+$tile-32-end: #E53935;
+$tile-64-start: #FCE4EC;
+$tile-64-end: #D81B60;
+$tile-128-start: #F3E5F5;
+$tile-128-end: #8E24AA;
+$tile-256-start: #F8BBD0;
+$tile-256-end: #C2185B;
+$tile-512-start: #E0F7FA;
+$tile-512-end: #00ACC1;
+$tile-1024-start: #E0F2F1;
+$tile-1024-end: #00796B;
+$tile-2048-start: #FFFDE7;
+$tile-2048-end: #F9A825;
+
+// ----------title "2048"----------
+$font-header-family: 'Montserrat', sans-serif;
+$font-header-weight: 700;
+$font-header-size-web: 48px;
+$font-header-size-mobile: 6.0rem;
+
+// labels "SCORE", "BEST"
+$font-label-family: 'Montserrat', sans-serif;
+$font-label-weight: 300;
+$font-label-size-web: 12px;
+$font-label-size-mobile: 1.5rem;
+
+// score value (numbers in the score and best)
+$font-score-family: 'Montserrat', sans-serif;
+$font-score-weight: 700;
+$font-score-size-web: 20px;
+$font-score-size-mobile: 2.5rem;
+
+// numbers of tiles (2-8)
+$font-tile-small-family: 'Montserrat', sans-serif;
+$font-tile-small-weight: 700;
+$font-tile-small-size-web: 28px;
+$font-tile-small-size-mobile: 3.5rem;
+
+// numbers of tiles (16+)
+$font-tile-large-family: 'Montserrat', sans-serif;
+$font-tile-large-weight: 700;
+$font-tile-large-size-web: 24px;
+$font-tile-large-size-mobile: 3.0rem;
+
+// buttons "New Game", "Rules"
+$font-button-family: 'Montserrat', sans-serif;
+$font-button-weight: 600;
+$font-button-size-web: 14px;
+$font-button-size-mobile: 1.8rem;
+
+// -----------General tile settings------------
+$tile-border-radius: 12px;
+$tile-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Special effects for tile 2048
+$tile-2048-glow: 0 0 15px 5px rgba(249, 168, 37, 0.4);
+
+// Grid cells (empty slots)
+$cell-border-radius: 12px;
+$cell-background: #bbada0; // Default background for empty cells
+$cell-border: none;
+
+// Main game container / grid
+$grid-border: none;
+$grid-padding: 10px;
+
+// Button styles
+$button-border-radius: 8px;
+$button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Button hover state
+$button-hover-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

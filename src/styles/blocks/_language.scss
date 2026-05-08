@@ -1,0 +1,32 @@
+.language-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-language {
+  cursor: pointer;
+
+  width: 50px;
+  border: none;
+  border-radius: 5px;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f2bd1e;
+
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &--is-active {
+    background-color: #484747;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+}
