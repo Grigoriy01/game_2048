@@ -34,13 +34,13 @@ $tile-2048-end: #F9A825;
 // ----------title "2048"----------
 $font-header-family: 'Montserrat', sans-serif;
 $font-header-weight: 700;
-$font-header-size-web: 48px;
+$font-header-size-web: 42px;
 $font-header-size-mobile: 6.0rem;
 
 // labels "SCORE", "BEST"
 $font-label-family: 'Montserrat', sans-serif;
-$font-label-weight: 300;
-$font-label-size-web: 12px;
+$font-label-weight: 400;
+$font-label-size-web: 14px;
 $font-label-size-mobile: 1.5rem;
 
 // score value (numbers in the score and best)
@@ -85,7 +85,7 @@ $grid-padding: 10px;
 
 // Button styles
 $button-border-radius: 8px;
-$button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$button-box-shadow: 0 0px 15px rgba(187, 183, 183, 0.1);
 
 // Button hover state
-$button-hover-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+$button-hover-box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);

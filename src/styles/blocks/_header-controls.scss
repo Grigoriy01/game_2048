@@ -10,6 +10,48 @@
   width: 75px;
   height: 75px;
   border: none;
+  border-radius: $button-border-radius;
+
+  font-family: $font-button-family;
+  font-size: $font-button-size-web;
+  font-weight: $font-button-weight;
+  color: $bg-main;
+
+  box-shadow: $button-box-shadow;
+
+  transition: 0.25s ease background, 0.25s ease box-shadow;
+}
+
+.start {
+  font-size: $font-score-size-web;
+  background: $button-start;
+
+  &:hover {
+    box-shadow: $button-hover-box-shadow;
+  }
+}
+
+.restart {
+  background: $button-restart;
+
+  &:hover {
+    box-shadow: $button-hover-box-shadow;
+  }
+}
+
+/*
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+
+  width: 75px;
+  height: 75px;
+  border: none;
   border-radius: 5px;
 
   font-family: sans-serif;
@@ -36,3 +78,4 @@
     background: #f87474;
   }
 }
+*/

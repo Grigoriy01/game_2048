@@ -1,5 +1,101 @@
 .field-cell {
   user-select: none;
+  box-sizing: border-box;
+  width: 75px;
+  height: 75px;
+
+  // Общие настройки из _vars.scss
+  border-radius: $tile-border-radius;
+  box-shadow: $tile-box-shadow;
+
+  // Центрирование контента
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  text-align: center;
+
+  // По умолчанию (пустая ячейка)
+  background: $tile-default;
+  border: $cell-border;
+
+  // --- Стили для плиток с номиналом ---
+
+  &--2, &--4, &--8 {
+    font-family: $font-tile-small-family;
+    font-weight: $font-tile-small-weight;
+    font-size: $font-tile-small-size-web;
+    color: $text-header; // Темный текст для светлых плиток
+  }
+
+  &--16, &--32, &--64, &--128, &--256, &--512, &--1024, &--2048 {
+    font-family: $font-tile-large-family;
+    font-weight: $font-tile-large-weight;
+    font-size: $font-tile-large-size-web;
+    color: #FFF; // Белый текст для контраста на темных/ярких фонах
+  }
+
+  &--2 {
+    background: linear-gradient(to bottom, $tile-2-start, $tile-2-end);
+  }
+
+  &--4 {
+    background: linear-gradient(to bottom, $tile-4-start, $tile-4-end);
+  }
+
+  &--8 {
+    background: linear-gradient(to bottom, $tile-8-start, $tile-8-end);
+  }
+
+  &--16 {
+    background: linear-gradient(to bottom, $tile-16-start, $tile-16-end);
+  }
+
+  &--32 {
+    background: linear-gradient(to bottom, $tile-32-start, $tile-32-end);
+  }
+
+  &--64 {
+    background: linear-gradient(to bottom, $tile-64-start, $tile-64-end);
+  }
+
+  &--128 {
+    background: linear-gradient(to bottom, $tile-128-start, $tile-128-end);
+  }
+
+  &--256 {
+    background: linear-gradient(to bottom, $tile-256-start, $tile-256-end);
+  }
+
+  &--512 {
+    background: linear-gradient(to bottom, $tile-512-start, $tile-512-end);
+  }
+
+  &--1024 {
+    background: linear-gradient(to bottom, $tile-1024-start, $tile-1024-end);
+  }
+
+  &--2048 {
+    background: linear-gradient(to bottom, $tile-2048-start, $tile-2048-end);
+    box-shadow: $tile-2048-glow; // Акцентное свечение для победной плитки
+  }
+}
+
+.game-field {
+  // Основная сетка
+  padding: $grid-padding;
+  border: $grid-border;
+  border-radius: $tile-border-radius;
+  background: $cell-background; // Цвет подложки сетки
+
+  // Если вы используете display: grid вместо table:
+  grid-gap: 10px;
+
+  // display: grid;
+}
+
+/*
+.field-cell {
+  user-select: none;
 
   box-sizing: border-box;
   width: 75px;
@@ -71,3 +167,4 @@
   border-radius: 5px;
   background: #bbada0;
 }
+*/

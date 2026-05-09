@@ -9,28 +9,41 @@ class GameView {
   #timerWin;
   #languages = {
     en: [
-      'How to play: Use the arrow keys (up, down, left, right) or swipes on a mobile device to move the tiles.',
-      'Merging: When two tiles with the same number touch, they merge into one!',
+      'How to play: Use the arrow keys (up, down, left, right) or ' +
+        'swipes on a mobile device to move the tiles.',
+      'Merging: When two tiles with the same number touch, ' +
+        'they merge into one!',
       'Goal: Join the tiles to get to the 2048 tile!',
-      'Game Over: If the board is full and there are no moves left, the game is over.',
+      'Game Over: If the board is full and there are no moves left, ' +
+        'the game is over.',
     ],
     de: [
-      'Spielanleitung: Verwenden Sie die Pfeiltasten (hoch, runter, links, rechts) oder Wischgesten auf einem mobilen Gerät, um die Spielsteine ​​zu bewegen.',
-      'Verschmelzen: Wenn zwei Kacheln mit der gleichen Zahl einander berühren, verschmelzen sie zu einer!',
+      'Spielanleitung: Verwenden Sie die Pfeiltasten (hoch, runter, links, ' +
+        'rechts) oder Wischgesten auf einem mobilen Gerät, ' +
+        'um die Spielsteine zu bewegen.',
+      'Verschmelzen: Wenn zwei Kacheln mit der gleichen Zahl einander ' +
+        'berühren, verschmelzen sie zu einer!',
       'Ziel: Kombiniere die Kacheln, um die 2048-Kachel zu erreichen!',
-      'Spiel vorbei: Wenn das Spielfeld voll ist und keine Züge mehr möglich sind, ist das Spiel beendet.',
+      'Spiel vorbei: Wenn das Spielfeld voll ist und keine Züge ' +
+        'mehr möglich sind, ist das Spiel beendet.',
     ],
     ru: [
-      'Как играть: используйте клавиши со стрелками (вверх, вниз, влево, вправо) или свайпы на мобильном устройстве, чтобы перемещать плитки.',
-      'Слияние: Когда две плитки с одинаковыми числами соприкасаются, они объединяются в одну, а их номиналы суммируются.',
+      'Как играть: используйте клавиши со стрелками (вверх, вниз, влево, ' +
+        'вправо) или свайпы на мобильном устройстве, чтобы перемещать плитки.',
+      'Слияние: Когда две плитки с одинаковыми числами соприкасаются, ' +
+        'они объединяются в одну, а их номиналы суммируются.',
       'Цель: Соединяй плитки и копи очки, чтобы добраться до числа 2048.',
-      'Конец игры: Если поле заполнено и доступных ходов для слияния больше нет — игра окончена.',
+      'Конец игры: Если поле заполнено и доступных ходов для слияния ' +
+        'больше нет — игра окончена.',
     ],
     esp: [
-      'Cómo jugar: Usa las teclas de flecha (arriba, abajo, izquierda, derecha) para mover las fichas.',
-      'Fusión: ¡Cuando dos fichas con el mismo número se tocan, se fusionan en una sola!',
+      'Cómo jugar: Usa las teclas de flecha (arriba, abajo, izquierda, ' +
+        'derecha) para mover las fichas.',
+      'Fusión: ¡Cuando dos fichas con el mismo número se tocan, ' +
+        'se fusionan en una sola!',
       'Objetivo: ¡Combina las fichas para llegar a la ficha 2048!',
-      'Fin del juego: Si el tablero está lleno y no quedan movimientos, el juego termina.',
+      'Fin del juego: Si el tablero está lleno y no quedan ' +
+        'movimientos, el juego termina.',
     ],
   };
 
@@ -53,7 +66,7 @@ class GameView {
     this.messageItems = document.querySelector('.message-container');
     this.titleGame = document.querySelector('h1');
 
-    // --> var for the blocks Message
+    // Variables for the blocks Message
     this.messageStart = this.messageItems.querySelector('.message-start');
     this.messageWin = this.messageItems.querySelector('.message-win');
     this.messageLose = this.messageItems.querySelector('.message-lose');
@@ -152,12 +165,13 @@ class GameView {
 
     this.languageContainer.addEventListener('click', (e) => {
       const value = e.target.closest('.btn-language');
-      const lowerCaseValue = value.textContent.toLowerCase();
-      const targetValue = e.target;
 
       if (!value) {
         return;
       }
+
+      const lowerCaseValue = value.textContent.toLowerCase();
+      const targetValue = e.target;
 
       this.switchLanguage(lowerCaseValue, targetValue);
     });
@@ -165,7 +179,7 @@ class GameView {
     // #endregion Listeners
   }
 
-  // --> updateView
+  // Update view
   updateView() {
     const state = this.game.getState();
 
@@ -181,7 +195,7 @@ class GameView {
       5000,
     );
   }
-  // --> work with message blocks
+  // Work with message blocks
   renderMessage(statusValue) {
     if (statusValue === Game.statuses.idle) {
       return;
@@ -194,14 +208,14 @@ class GameView {
     this.titleGame.classList.remove('hidden');
 
     if (statusValue !== Game.statuses.playing) {
-      const sufix = statusValue === Game.statuses.win ? 'win' : 'lose';
-      const messageEl = this.messageItems.querySelector(`.message-${sufix}`);
+      const suffix = statusValue === Game.statuses.win ? 'win' : 'lose';
+      const messageEl = this.messageItems.querySelector(`.message-${suffix}`);
 
-      if (sufix === 'lose') {
+      if (suffix === 'lose') {
         this.runWinTimer();
       }
 
-      if (sufix === 'win') {
+      if (suffix === 'win') {
         this.titleGame.classList.add('hidden');
       }
       messageEl.classList.remove('hidden');
@@ -209,7 +223,7 @@ class GameView {
     }
   }
 
-  // --> handleBtnStart
+  // Handle button Start
   handleBtnStart() {
     const statusValue = this.game.getState().statusGame;
 
@@ -225,7 +239,7 @@ class GameView {
     }
   }
 
-  // --> rendering Board
+  // Rendering Board
   renderBoard(boardData, cellIndex) {
     const flatBoard = boardData.flat();
 
@@ -256,13 +270,13 @@ class GameView {
 
       cellIndex.forEach((val) => {
         if (i === val) {
-          this.trigerCellPulse(cell);
+          this.triggerCellPulse(cell);
         }
       });
     });
   }
 
-  // --> rendering Status - Game
+  // Rendering Status - Game
   renderStatusGame(infoStatus) {
     // changing button
     if (infoStatus !== Game.statuses.idle) {
@@ -274,7 +288,7 @@ class GameView {
     this.renderMessage(infoStatus);
   }
 
-  // -->rendering Score
+  // Rendering Score
   renderScore(dataScore, dataBestScore) {
     this.currentScore.textContent = dataScore;
     this.bestScore.textContent = dataBestScore;
@@ -283,7 +297,7 @@ class GameView {
   // #endregion methods-tools
 
   // #region animation
-  trigerCellPulse(currCell) {
+  triggerCellPulse(currCell) {
     currCell.classList.add('scale-element');
 
     setTimeout(() => {
@@ -306,23 +320,23 @@ class GameView {
   switchLanguage(newLanguage, currEl) {
     switch (newLanguage) {
       case 'de':
-        this.changerActiveLanguageClass(currEl);
+        this.changeActiveLanguageClass(currEl);
 
         return this.renderRulesMessage(this.#languages.de);
 
       case 'ru':
-        this.changerActiveLanguageClass(currEl);
+        this.changeActiveLanguageClass(currEl);
 
         return this.renderRulesMessage(this.#languages.ru);
 
       case 'esp':
-        this.changerActiveLanguageClass(currEl);
+        this.changeActiveLanguageClass(currEl);
 
         return this.renderRulesMessage(this.#languages.esp);
 
       default:
         if (currEl) {
-          this.changerActiveLanguageClass(currEl);
+          this.changeActiveLanguageClass(currEl);
         }
 
         return this.renderRulesMessage(this.#languages.en);
@@ -341,7 +355,7 @@ class GameView {
     });
   }
 
-  changerActiveLanguageClass(currButton) {
+  changeActiveLanguageClass(currButton) {
     const activeClass = this.languageContainer.querySelector(
       '.btn-language--is-active',
     );

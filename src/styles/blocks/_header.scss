@@ -5,6 +5,37 @@
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 24px;
+  padding: $grid-padding;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 150px;
+  height: 75px;
+  margin: 0;
+  border-radius: $tile-border-radius;
+
+  font-family: $font-header-family;
+  font-size: $font-header-size-web;
+  font-weight: $font-header-weight;
+  color: $bg-main;
+
+  background: linear-gradient(to bottom, $tile-2048-start, $tile-2048-end);
+  box-shadow: $tile-2048-glow;
+}
+
+/*
+.game-header {
+  display: flex;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
   padding: 10px;
 }
 
@@ -24,3 +55,4 @@ h1 {
 
   background: #edc22e;
 }
+*/

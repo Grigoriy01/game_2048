@@ -7,6 +7,61 @@
   width: 100%;
   height: 30px;
   margin-block: 0;
+
+  // Применяем общее скругление для ячеек/элементов
+  border-radius: $cell-border-radius;
+
+  // Типография для лейблов "SCORE/BEST"
+  font-family: $font-label-family;
+  font-weight: $font-label-weight;
+  font-size: $font-label-size-web;
+
+  // Цвет текста (основной инфо-текст)
+  color: $text-info;
+
+  // Фон счетчика (используем дефолтный цвет пустой плитки/ячейки)
+  background: $tile-default;
+
+  &__best {
+    // Более светлый оттенок для второстепенного текста
+    color: $text-info;
+  }
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+  margin: 0 auto;
+}
+
+.game-score {
+  // Значение счета (числа)
+  font-family: $font-score-family;
+  font-size: $font-score-size-web;
+  font-weight: $font-score-weight;
+  color: $text-header;
+}
+
+.game-best-score {
+  // Значение самого счета (числа)
+  font-family: $font-score-family;
+  font-size: $font-label-size-web;
+  font-weight: $font-label-weight;
+  color: $text-header;
+}
+
+/* .counter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  margin-block: 0;
   border-radius: 15px;
 
   font-size: 16px;
@@ -31,3 +86,5 @@
 .game-best-score {
   color: #9d958d;
 }
+*/
+

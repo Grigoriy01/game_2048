@@ -1,5 +1,39 @@
 .rules-btn {
   z-index: 30;
+
+  width: 100px;
+  height: 30px;
+  border-radius: $button-border-radius;
+  font-family: $font-button-family;
+
+  background-color: $button-rules;
+
+  font-size: $font-button-size-web;
+  font-weight: $font-button-weight;
+
+  &:hover {
+    box-shadow: $button-hover-box-shadow;
+  }
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 100%;
+  margin-top: 0;
+  padding: 0;
+
+  font-family: $font-label-family;
+  font-size: 16px;
+  color: $text-info;
+  list-style-type: none;
+}
+
+/*
+.rules-btn {
+  z-index: 30;
   width: 100px;
   height: 30px;
   background-color: #f2b179;
@@ -21,3 +55,4 @@
   font-size: 16px;
   list-style-type: none;
 }
+*/
