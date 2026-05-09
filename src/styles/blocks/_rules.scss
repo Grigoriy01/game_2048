@@ -4,12 +4,13 @@
   width: 100px;
   height: 30px;
   border-radius: $button-border-radius;
+
   font-family: $font-button-family;
+  font-size: $font-button-size-web;
+
+  font-weight: $font-button-weight;
 
   background-color: $button-rules;
-
-  font-size: $font-button-size-web;
-  font-weight: $font-button-weight;
 
   &:hover {
     box-shadow: $button-hover-box-shadow;

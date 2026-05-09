@@ -115,30 +115,26 @@ class GameView {
       const diffX = touchPosEndX - this.#touchPosStartX;
       const diffY = touchPosEndY - this.#touchPosStartY;
 
-      // Проверяем, было ли движение достаточно длинным по любой из осей
+      // We check whether the movement was long enough along any of the axes
       if (Math.abs(diffX) < threshold && Math.abs(diffY) < threshold) {
         return;
       }
 
-      if (this.#touchPosStartX < touchPosEndX) {
-        this.game.moveRight();
-        this.updateView();
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+          this.game.moveRight();
+        } else {
+          this.game.moveLeft();
+        }
+      } else {
+        if (diffY > 0) {
+          this.game.moveDown();
+        } else {
+          this.game.moveUp();
+        }
       }
 
-      if (this.#touchPosStartX > touchPosEndX) {
-        this.game.moveLeft();
-        this.updateView();
-      }
-
-      if (this.#touchPosStartY < touchPosEndY) {
-        this.game.moveDown();
-        this.updateView();
-      }
-
-      if (this.#touchPosStartY > touchPosEndY) {
-        this.game.moveUp();
-        this.updateView();
-      }
+      this.updateView();
     });
 
     document.addEventListener('keydown', (e) => {

@@ -5,7 +5,9 @@
   height: 75px;
 
   // Общие настройки из _vars.scss
+  border: $cell-border;
   border-radius: $tile-border-radius;
+
   box-shadow: $tile-box-shadow;
 
   // Центрирование контента
@@ -16,21 +18,20 @@
 
   // По умолчанию (пустая ячейка)
   background: $tile-default;
-  border: $cell-border;
 
   // --- Стили для плиток с номиналом ---
 
   &--2, &--4, &--8 {
     font-family: $font-tile-small-family;
-    font-weight: $font-tile-small-weight;
     font-size: $font-tile-small-size-web;
+    font-weight: $font-tile-small-weight;
     color: $text-header; // Темный текст для светлых плиток
   }
 
   &--16, &--32, &--64, &--128, &--256, &--512, &--1024, &--2048 {
     font-family: $font-tile-large-family;
-    font-weight: $font-tile-large-weight;
     font-size: $font-tile-large-size-web;
+    font-weight: $font-tile-large-weight;
     color: #FFF; // Белый текст для контраста на темных/ярких фонах
   }
 
@@ -82,10 +83,10 @@
 
 .game-field {
   // Основная сетка
+  background: $cell-background; // Цвет подложки сетки
   padding: $grid-padding;
   border: $grid-border;
   border-radius: $tile-border-radius;
-  background: $cell-background; // Цвет подложки сетки
 
   // Если вы используете display: grid вместо table:
   grid-gap: 10px;
