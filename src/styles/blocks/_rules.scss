@@ -7,7 +7,6 @@
 
   font-family: $font-button-family;
   font-size: $font-button-size-web;
-
   font-weight: $font-button-weight;
 
   background-color: $button-rules;
@@ -31,29 +30,3 @@
   color: $text-info;
   list-style-type: none;
 }
-
-/*
-.rules-btn {
-  z-index: 30;
-  width: 100px;
-  height: 30px;
-  background-color: #f2b179;
-
-  &:hover {
-    background-color: #ed994e;
-  }
-}
-
-.rules-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  height: 100%;
-  margin-top: 0;
-  padding: 0;
-
-  font-size: 16px;
-  list-style-type: none;
-}
-*/

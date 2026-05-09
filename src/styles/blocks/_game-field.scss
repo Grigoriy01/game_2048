@@ -83,89 +83,14 @@
 
 .game-field {
   // Основная сетка
-  background: $cell-background; // Цвет подложки сетки
   padding: $grid-padding;
   border: $grid-border;
   border-radius: $tile-border-radius;
+
+  background: $cell-background; // Цвет подложки сетки
 
   // Если вы используете display: grid вместо table:
   grid-gap: 10px;
 
   // display: grid;
 }
-
-/*
-.field-cell {
-  user-select: none;
-
-  box-sizing: border-box;
-  width: 75px;
-  height: 75px;
-  border-radius: 5px;
-
-  color: #776e65;
-  text-align: center;
-  vertical-align: center;
-
-  background: #d6cdc4;
-
-  &--2 {
-    background: #eee4da;
-  }
-
-  &--4 {
-    background: #ede0c8;
-  }
-
-  &--8 {
-    color: #f9f6f2;
-    background: #f2b179;
-  }
-
-  &--16 {
-    color: #f9f6f2;
-    background: #f59563;
-  }
-
-  &--32 {
-    color: #f9f6f2;
-    background: #f67c5f;
-  }
-
-  &--64 {
-    color: #f9f6f2;
-    background: #f65e3b;
-  }
-
-  &--128 {
-    color: #f9f6f2;
-    background: #edcf72;
-  }
-
-  &--256 {
-    color: #f9f6f2;
-    background: #edcc61;
-  }
-
-  &--512 {
-    color: #f9f6f2;
-    background: #edc850;
-  }
-
-  &--1024 {
-    color: #f9f6f2;
-    background: #edc53f;
-  }
-
-  &--2048 {
-    color: #f9f6f2;
-    background: #edc22e;
-  }
-}
-
-.game-field {
-  border-spacing: 10px;
-  border-radius: 5px;
-  background: #bbada0;
-}
-*/
